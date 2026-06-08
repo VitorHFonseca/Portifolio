@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfólio de projetos Power BI - Visualização de dados e dashboards interativos"/>
-  <title>Power BI Portfolio | Vitor Fonseca</title>
+  <meta name="description" content="Portfólio — Power BI, N8N, Power Automate | Vitor Fonseca"/>
+  <title>Vitor Fonseca | Data & Automation</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+  <!-- PARTICLES BACKGROUND -->
+  <canvas id="particles"></canvas>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
+      <span class="loader-text">Carregando<span class="dots">...</span></span>
+    </div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">
-        <i class="fas fa-chart-bar"></i> Vitor Henrique - Portifolio
+        <span class="logo-bracket">&lt;</span>VF<span class="logo-bracket">/&gt;</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#contact">Contato</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"><i class="fas fa-home"></i> Início</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> Sobre</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-chart-bar"></i> Power BI</a></li>
+        <li><a href="#automation"><i class="fas fa-robot"></i> Automações</a></li>
+        <li><a href="#gallery"><i class="fas fa-photo-video"></i> Galeria</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -32,55 +45,84 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg"></div>
     <div class="hero-content">
-      <span class="hero-badge">📊 Power BI Developer</span>
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        Disponível para projetos
+      </div>
       <h1 class="hero-title">
-        Transformando <span class="highlight">dados</span><br/>
-        em <span class="highlight">decisões</span>
+        <span class="glitch" data-text="Vitor Fonseca">Vitor Fonseca</span>
       </h1>
-      <p class="hero-subtitle">
-        Criação de dashboards interativos, relatórios analíticos<br/>
-        e soluções de Business Intelligence com Power BI.
+      <div class="hero-subtitle">
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Especialista em <strong>Business Intelligence</strong>, 
+        <strong>Automação de Processos</strong> e <strong>Análise de Dados</strong>.
+        Transformando dados em decisões e processos em eficiência.
       </p>
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-eye"></i> Ver Projetos
+          <i class="fas fa-rocket"></i> Ver Projetos
+        </a>
+        <a href="#automation" class="btn btn-glow">
+          <i class="fas fa-robot"></i> Automações
         </a>
         <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-envelope"></i> Entrar em Contato
+          <i class="fas fa-envelope"></i> Contato
         </a>
       </div>
       <div class="hero-stats">
-        <div class="stat">
+        <div class="stat-item">
           <span class="stat-number" data-target="10">0</span><span>+</span>
           <span class="stat-label">Projetos</span>
         </div>
         <div class="stat-divider"></div>
-        <div class="stat">
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span><span>+</span>
+          <span class="stat-label">Automações</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
           <span class="stat-number" data-target="5">0</span><span>+</span>
           <span class="stat-label">Anos Exp.</span>
         </div>
         <div class="stat-divider"></div>
-        <div class="stat">
+        <div class="stat-item">
           <span class="stat-number" data-target="100">0</span><span>%</span>
           <span class="stat-label">Dedicação</span>
         </div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="chart-mockup">
-        <div class="chart-bar" style="--h:60%"></div>
-        <div class="chart-bar" style="--h:85%"></div>
-        <div class="chart-bar" style="--h:45%"></div>
-        <div class="chart-bar" style="--h:95%"></div>
-        <div class="chart-bar" style="--h:70%"></div>
-        <div class="chart-bar" style="--h:55%"></div>
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-title">automation.py</span>
+        </div>
+        <pre class="code-body"><code><span class="c-purple">import</span> <span class="c-blue">powerbi</span>, <span class="c-blue">n8n</span>
+<span class="c-purple">from</span> <span class="c-blue">automation</span> <span class="c-purple">import</span> <span class="c-yellow">*</span>
+
+<span class="c-green"># Transformando dados em valor</span>
+<span class="c-blue">dashboard</span> = powerbi.<span class="c-yellow">create</span>({
+  <span class="c-orange">"fonte"</span>: <span class="c-orange">"SQL Server"</span>,
+  <span class="c-orange">"kpis"</span>: [<span class="c-orange">"vendas"</span>, <span class="c-orange">"roi"</span>],
+  <span class="c-orange">"refresh"</span>: <span class="c-orange">"diário"</span>
+})
+
+<span class="c-blue">workflow</span> = n8n.<span class="c-yellow">automate</span>({
+  <span class="c-orange">"trigger"</span>: <span class="c-orange">"webhook"</span>,
+  <span class="c-orange">"nodes"</span>: <span class="c-orange">42</span>,
+  <span class="c-orange">"status"</span>: <span class="c-green">✓ ativo</span>
+})</code></pre>
       </div>
     </div>
     <div class="scroll-indicator">
-      <span>Rolar</span>
-      <i class="fas fa-chevron-down"></i>
+      <div class="scroll-line"></div>
+      <span>scroll</span>
     </div>
   </section>
 
@@ -88,49 +130,60 @@
   <section class="about" id="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Quem sou eu</span>
+        <span class="section-tag"><i class="fas fa-terminal"></i> whoami</span>
         <h2 class="section-title">Sobre Mim</h2>
+        <div class="title-line"></div>
       </div>
       <div class="about-grid">
-        <div class="about-image">
-          <div class="avatar-placeholder">
-            <i class="fas fa-user"></i>
+        <div class="about-visual">
+          <div class="about-avatar">
+            <!-- Substitua pela sua foto: assets/images/profile.jpg -->
+            <img src="assets/images/profile.jpg" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 alt="Vitor Fonseca" class="profile-photo"/>
+            <div class="avatar-fallback">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
           </div>
-          <div class="about-badge">
-            <i class="fas fa-certificate"></i> Microsoft Certified
+          <div class="about-tools">
+            <div class="tool-badge" style="--c:#F2C811">
+              <i class="fas fa-chart-pie"></i> Power BI
+            </div>
+            <div class="tool-badge" style="--c:#ea4b71">
+              <i class="fas fa-project-diagram"></i> N8N
+            </div>
+            <div class="tool-badge" style="--c:#0078D4">
+              <i class="fas fa-bolt"></i> Power Automate
+            </div>
+            <div class="tool-badge" style="--c:#3776AB">
+              <i class="fab fa-python"></i> Python
+            </div>
           </div>
         </div>
         <div class="about-text">
-          <h3>Analista de Dados & Power BI Developer</h3>
-          <p>
-            Profissional especializado em <strong>Business Intelligence</strong> e 
-            análise de dados, com foco em criar soluções visuais que transformam 
-            dados complexos em insights acionáveis.
-          </p>
-          <p>
-            Expertise em modelagem de dados, criação de medidas DAX avançadas, 
-            integração com múltiplas fontes de dados e design de dashboards 
-            orientados à experiência do usuário.
-          </p>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Modelagem de dados (Star Schema)</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>DAX avançado e Power Query (M)</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Integração com Azure & SQL Server</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Relatórios paginados (SSRS)</span>
-            </div>
+          <p class="about-greeting">Olá! 👋</p>
+          <h3>Analista de Dados &<br/>Especialista em Automação</h3>
+          <p>Profissional com sólida experiência em <strong>Business Intelligence</strong>, 
+          desenvolvimento de dashboards analíticos e automação inteligente de processos 
+          com <strong>N8N</strong> e <strong>Power Automate</strong>.</p>
+          <p>Apaixonado por transformar dados brutos em insights poderosos e processos 
+          manuais em fluxos automatizados eficientes.</p>
+          <div class="about-list">
+            <div class="list-item"><i class="fas fa-check"></i> Modelagem de dados & Star Schema</div>
+            <div class="list-item"><i class="fas fa-check"></i> DAX avançado & Power Query (M)</div>
+            <div class="list-item"><i class="fas fa-check"></i> Workflows N8N com +40 integrações</div>
+            <div class="list-item"><i class="fas fa-check"></i> Power Automate & Power Apps</div>
+            <div class="list-item"><i class="fas fa-check"></i> Azure Data Factory & Synapse</div>
+            <div class="list-item"><i class="fas fa-check"></i> SQL Server & Python (Pandas)</div>
           </div>
-          <a href="#projects" class="btn btn-primary">Ver meu trabalho</a>
+          <div class="about-actions">
+            <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+            <a href="assets/images/curriculo.pdf" class="btn btn-outline" download>
+              <i class="fas fa-download"></i> Currículo
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -140,87 +193,95 @@
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Competências</span>
-        <h2 class="section-title">Habilidades Técnicas</h2>
+        <span class="section-tag"><i class="fas fa-code"></i> skills.json</span>
+        <h2 class="section-title">Stack Tecnológica</h2>
+        <div class="title-line"></div>
       </div>
       <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon" style="background:#F2C811;">
-            <i class="fas fa-chart-pie" style="color:#000;"></i>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#F2C811">
+            <i class="fas fa-chart-pie"></i>
           </div>
           <h3>Power BI</h3>
+          <p>Dashboards, relatórios paginados, DAX avançado</p>
           <div class="skill-bar">
-            <div class="skill-fill" data-width="95%"></div>
+            <div class="skill-fill" data-width="95">
+              <span class="skill-tip">95%</span>
+            </div>
           </div>
-          <span class="skill-percent">95%</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon" style="background:#0078D4;">
-            <i class="fas fa-database" style="color:#fff;"></i>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#ea4b71">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3>N8N</h3>
+          <p>Workflows, integrações, automação no-code</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="88">
+              <span class="skill-tip">88%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#0078D4">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Power Automate</h3>
+          <p>Fluxos automatizados, RPA, conectores</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="85">
+              <span class="skill-tip">85%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#217346">
+            <i class="fas fa-database"></i>
           </div>
           <h3>SQL Server</h3>
+          <p>Queries avançadas, stored procedures, ETL</p>
           <div class="skill-bar">
-            <div class="skill-fill" data-width="85%"></div>
+            <div class="skill-fill" data-width="85">
+              <span class="skill-tip">85%</span>
+            </div>
           </div>
-          <span class="skill-percent">85%</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon" style="background:#217346;">
-            <i class="fas fa-file-excel" style="color:#fff;"></i>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#3776AB">
+            <i class="fab fa-python"></i>
           </div>
-          <h3>Excel Avançado</h3>
+          <h3>Python</h3>
+          <p>Pandas, automações, scripts de dados</p>
           <div class="skill-bar">
-            <div class="skill-fill" data-width="90%"></div>
+            <div class="skill-fill" data-width="75">
+              <span class="skill-tip">75%</span>
+            </div>
           </div>
-          <span class="skill-percent">90%</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon" style="background:#3776AB;">
-            <i class="fab fa-python" style="color:#fff;"></i>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#00B4AB">
+            <i class="fas fa-cloud"></i>
           </div>
-          <h3>Python (Pandas)</h3>
+          <h3>Azure</h3>
+          <p>Synapse, Data Factory, Logic Apps</p>
           <div class="skill-bar">
-            <div class="skill-fill" data-width="70%"></div>
+            <div class="skill-fill" data-width="78">
+              <span class="skill-tip">78%</span>
+            </div>
           </div>
-          <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon" style="background:#00B4AB;">
-            <i class="fas fa-cloud" style="color:#fff;"></i>
-          </div>
-          <h3>Azure Synapse</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="75%"></div>
-          </div>
-          <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon" style="background:#E44D26;">
-            <i class="fas fa-code" style="color:#fff;"></i>
-          </div>
-          <h3>DAX / M Query</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="88%"></div>
-          </div>
-          <span class="skill-percent">88%</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- POWER BI PROJECTS -->
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Trabalhos</span>
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <p class="section-subtitle">
-          Dashboards e relatórios desenvolvidos com Power BI, 
-          focados em resultados de negócio.
-        </p>
+        <span class="section-tag"><i class="fas fa-chart-bar"></i> powerbi.reports</span>
+        <h2 class="section-title">Projetos Power BI</h2>
+        <div class="title-line"></div>
       </div>
-
-      <!-- Filtros -->
       <div class="filter-tabs">
         <button class="filter-btn active" data-filter="all">Todos</button>
         <button class="filter-btn" data-filter="vendas">Vendas</button>
@@ -228,28 +289,30 @@
         <button class="filter-btn" data-filter="rh">RH</button>
         <button class="filter-btn" data-filter="operacional">Operacional</button>
       </div>
-
       <div class="projects-grid" id="projectsGrid">
 
-        <!-- Projeto 1 -->
-        <article class="project-card" data-category="vendas">
+        <article class="project-card" data-category="vendas" data-aos>
           <div class="card-image">
+            <!-- Adicione sua imagem: assets/images/projects/vendas.png -->
+            <img src="assets/images/projects/vendas.png"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 alt="Dashboard Vendas" class="card-img"/>
             <div class="card-img-placeholder">
               <i class="fas fa-chart-line"></i>
             </div>
             <div class="card-overlay">
               <a href="projects/project-1.pbix" class="overlay-btn" download>
-                <i class="fas fa-download"></i> Download .pbix
+                <i class="fas fa-download"></i> .pbix
               </a>
               <button class="overlay-btn" onclick="openModal('modal1')">
-                <i class="fas fa-expand"></i> Ver Detalhes
+                <i class="fas fa-expand"></i> Detalhes
               </button>
             </div>
             <span class="card-tag">Vendas</span>
           </div>
           <div class="card-body">
             <h3>Dashboard de Vendas</h3>
-            <p>Análise completa de performance de vendas com KPIs, metas e comparativos YoY.</p>
+            <p>KPIs, metas, comparativo YoY e análise por região.</p>
             <div class="card-techs">
               <span class="tech">Power BI</span>
               <span class="tech">DAX</span>
@@ -257,34 +320,34 @@
             </div>
             <div class="card-footer">
               <span class="card-date"><i class="fas fa-calendar"></i> Jun 2026</span>
-              <div class="card-actions">
-                <a href="projects/project-1.pbix" class="btn-sm" download>
-                  <i class="fas fa-download"></i>
-                </a>
-              </div>
+              <a href="projects/project-1.pbix" class="btn-sm" download>
+                <i class="fas fa-download"></i>
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- Projeto 2 -->
-        <article class="project-card" data-category="financeiro">
+        <article class="project-card" data-category="financeiro" data-aos>
           <div class="card-image">
-            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#1e3c72,#2a5298);">
+            <img src="assets/images/projects/financeiro.png"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 alt="Análise Financeira" class="card-img"/>
+            <div class="card-img-placeholder" style="background:linear-gradient(135deg,#1e3c72,#2a5298);">
               <i class="fas fa-coins"></i>
             </div>
             <div class="card-overlay">
               <a href="projects/project-2.pbix" class="overlay-btn" download>
-                <i class="fas fa-download"></i> Download .pbix
+                <i class="fas fa-download"></i> .pbix
               </a>
               <button class="overlay-btn" onclick="openModal('modal2')">
-                <i class="fas fa-expand"></i> Ver Detalhes
+                <i class="fas fa-expand"></i> Detalhes
               </button>
             </div>
             <span class="card-tag">Financeiro</span>
           </div>
           <div class="card-body">
             <h3>Análise Financeira</h3>
-            <p>Relatório financeiro com DRE, fluxo de caixa e indicadores de rentabilidade.</p>
+            <p>DRE, fluxo de caixa, ROI, EBITDA e margem líquida.</p>
             <div class="card-techs">
               <span class="tech">Power BI</span>
               <span class="tech">Power Query</span>
@@ -292,26 +355,26 @@
             </div>
             <div class="card-footer">
               <span class="card-date"><i class="fas fa-calendar"></i> Mai 2026</span>
-              <div class="card-actions">
-                <a href="projects/project-2.pbix" class="btn-sm" download>
-                  <i class="fas fa-download"></i>
-                </a>
-              </div>
+              <a href="projects/project-2.pbix" class="btn-sm" download>
+                <i class="fas fa-download"></i>
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- Projeto 3 (placeholder) -->
-        <article class="project-card project-card--new" data-category="rh">
+        <article class="project-card" data-category="rh" data-aos>
           <div class="card-image">
-            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#11998e,#38ef7d);">
+            <img src="assets/images/projects/rh.png"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 alt="People Analytics" class="card-img"/>
+            <div class="card-img-placeholder" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
               <i class="fas fa-users"></i>
             </div>
-            <span class="card-tag">RH</span>
+            <span class="card-tag badge-soon-tag">Em breve</span>
           </div>
           <div class="card-body">
             <h3>People Analytics</h3>
-            <p>Dashboard de RH com turnover, headcount e análise de desempenho por área.</p>
+            <p>Turnover, headcount e análise de desempenho por área.</p>
             <div class="card-techs">
               <span class="tech">Power BI</span>
               <span class="tech">Python</span>
@@ -327,66 +390,447 @@
     </div>
   </section>
 
+  <!-- AUTOMATION SECTION -->
+  <section class="automation" id="automation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-robot"></i> automation.workflows</span>
+        <h2 class="section-title">Automações Inteligentes</h2>
+        <div class="title-line"></div>
+        <p class="section-subtitle">Fluxos automatizados com N8N e Power Automate que eliminam trabalho manual e aumentam produtividade</p>
+      </div>
+
+      <!-- Tabs N8N / Power Automate -->
+      <div class="auto-tabs">
+        <button class="auto-tab active" data-tab="n8n">
+          <i class="fas fa-project-diagram"></i> N8N
+        </button>
+        <button class="auto-tab" data-tab="powerautomate">
+          <i class="fas fa-bolt"></i> Power Automate
+        </button>
+      </div>
+
+      <!-- N8N -->
+      <div class="auto-content active" id="tab-n8n">
+        <div class="auto-grid">
+
+          <div class="auto-card" data-aos>
+            <div class="auto-card-header" style="--ac:#ea4b71">
+              <i class="fas fa-envelope-open-text"></i>
+              <span class="auto-badge">N8N</span>
+            </div>
+            <div class="auto-card-body">
+              <h3>Automação de E-mails</h3>
+              <p>Leitura, classificação e resposta automática de e-mails com IA integrada.</p>
+              <div class="auto-flow">
+                <span class="flow-node">Gmail</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">OpenAI</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Resposta</span>
+              </div>
+              <div class="auto-stats">
+                <span><i class="fas fa-clock"></i> 3h/dia economizadas</span>
+                <span><i class="fas fa-check-circle"></i> Ativo</span>
+              </div>
+            </div>
+            <button class="auto-expand" onclick="openModal('autoModal1')">
+              <i class="fas fa-expand"></i> Ver Workflow
+            </button>
+          </div>
+
+          <div class="auto-card" data-aos>
+            <div class="auto-card-header" style="--ac:#ea4b71">
+              <i class="fas fa-chart-line"></i>
+              <span class="auto-badge">N8N</span>
+            </div>
+            <div class="auto-card-body">
+              <h3>Relatório Automático Power BI</h3>
+              <p>Extração de dados, atualização de dataset e envio de relatório por WhatsApp.</p>
+              <div class="auto-flow">
+                <span class="flow-node">SQL</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Power BI</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">WhatsApp</span>
+              </div>
+              <div class="auto-stats">
+                <span><i class="fas fa-clock"></i> Diário às 08h</span>
+                <span><i class="fas fa-check-circle"></i> Ativo</span>
+              </div>
+            </div>
+            <button class="auto-expand" onclick="openModal('autoModal2')">
+              <i class="fas fa-expand"></i> Ver Workflow
+            </button>
+          </div>
+
+          <div class="auto-card" data-aos>
+            <div class="auto-card-header" style="--ac:#ea4b71">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="auto-badge">N8N</span>
+            </div>
+            <div class="auto-card-body">
+              <h3>Integração E-commerce</h3>
+              <p>Sincronização de pedidos entre plataformas, estoque e ERP em tempo real.</p>
+              <div class="auto-flow">
+                <span class="flow-node">Shopify</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">ERP</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Sheets</span>
+              </div>
+              <div class="auto-stats">
+                <span><i class="fas fa-bolt"></i> Tempo real</span>
+                <span><i class="fas fa-check-circle"></i> Ativo</span>
+              </div>
+            </div>
+            <button class="auto-expand" onclick="openModal('autoModal3')">
+              <i class="fas fa-expand"></i> Ver Workflow
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Power Automate -->
+      <div class="auto-content" id="tab-powerautomate">
+        <div class="auto-grid">
+
+          <div class="auto-card" data-aos>
+            <div class="auto-card-header" style="--ac:#0078D4">
+              <i class="fas fa-file-invoice"></i>
+              <span class="auto-badge pa">Power Automate</span>
+            </div>
+            <div class="auto-card-body">
+              <h3>Aprovação de Documentos</h3>
+              <p>Fluxo de aprovação multinível para contratos e documentos financeiros.</p>
+              <div class="auto-flow">
+                <span class="flow-node">SharePoint</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Teams</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Aprovação</span>
+              </div>
+              <div class="auto-stats">
+                <span><i class="fas fa-users"></i> 5 aprovadores</span>
+                <span><i class="fas fa-check-circle"></i> Ativo</span>
+              </div>
+            </div>
+            <button class="auto-expand" onclick="openModal('autoModal4')">
+              <i class="fas fa-expand"></i> Ver Fluxo
+            </button>
+          </div>
+
+          <div class="auto-card" data-aos>
+            <div class="auto-card-header" style="--ac:#0078D4">
+              <i class="fas fa-robot"></i>
+              <span class="auto-badge pa">Power Automate</span>
+            </div>
+            <div class="auto-card-body">
+              <h3>RPA — Extração de Dados</h3>
+              <p>Robô que extrai dados de sistemas legados e alimenta planilhas automaticamente.</p>
+              <div class="auto-flow">
+                <span class="flow-node">Sistema</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">RPA</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Excel</span>
+              </div>
+              <div class="auto-stats">
+                <span><i class="fas fa-clock"></i> 5h/semana salvas</span>
+                <span><i class="fas fa-check-circle"></i> Ativo</span>
+              </div>
+            </div>
+            <button class="auto-expand" onclick="openModal('autoModal5')">
+              <i class="fas fa-expand"></i> Ver Fluxo
+            </button>
+          </div>
+
+          <div class="auto-card" data-aos>
+            <div class="auto-card-header" style="--ac:#0078D4">
+              <i class="fas fa-bell"></i>
+              <span class="auto-badge pa">Power Automate</span>
+            </div>
+            <div class="auto-card-body">
+              <h3>Alertas de KPI</h3>
+              <p>Monitoramento de KPIs no Power BI com alertas automáticos via Teams e e-mail.</p>
+              <div class="auto-flow">
+                <span class="flow-node">Power BI</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Alerta</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="flow-node">Teams</span>
+              </div>
+              <div class="auto-stats">
+                <span><i class="fas fa-eye"></i> 24/7 monitorado</span>
+                <span><i class="fas fa-check-circle"></i> Ativo</span>
+              </div>
+            </div>
+            <button class="auto-expand" onclick="openModal('autoModal6')">
+              <i class="fas fa-expand"></i> Ver Fluxo
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-photo-video"></i> gallery.media</span>
+        <h2 class="section-title">Galeria</h2>
+        <div class="title-line"></div>
+        <p class="section-subtitle">Prints de dashboards, fluxos de automação e projetos desenvolvidos</p>
+      </div>
+
+      <div class="gallery-filter">
+        <button class="gallery-btn active" data-gfilter="all">Todos</button>
+        <button class="gallery-btn" data-gfilter="dashboard">Dashboards</button>
+        <button class="gallery-btn" data-gfilter="automation">Automações</button>
+        <button class="gallery-btn" data-gfilter="video">Vídeos</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- IMAGENS: coloque seus arquivos em assets/images/projects/ -->
+        <!-- Exemplo de item de imagem -->
+        <div class="gallery-item" data-gcat="dashboard" data-aos>
+          <img src="assets/images/projects/vendas.png"
+               onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
+               alt="Dashboard Vendas" class="gallery-img"/>
+          <div class="gallery-placeholder">
+            <i class="fas fa-chart-line"></i>
+            <span>Dashboard Vendas</span>
+            <small>Adicione: assets/images/projects/vendas.png</small>
+          </div>
+          <div class="gallery-hover">
+            <i class="fas fa-search-plus"></i>
+            <span>Dashboard Vendas</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-gcat="dashboard" data-aos>
+          <img src="assets/images/projects/financeiro.png"
+               onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
+               alt="Financeiro" class="gallery-img"/>
+          <div class="gallery-placeholder">
+            <i class="fas fa-coins"></i>
+            <span>Análise Financeira</span>
+            <small>Adicione: assets/images/projects/financeiro.png</small>
+          </div>
+          <div class="gallery-hover">
+            <i class="fas fa-search-plus"></i>
+            <span>Análise Financeira</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-gcat="automation" data-aos>
+          <img src="assets/images/automation/n8n-workflow.png"
+               onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
+               alt="N8N Workflow" class="gallery-img"/>
+          <div class="gallery-placeholder">
+            <i class="fas fa-project-diagram"></i>
+            <span>N8N Workflow</span>
+            <small>Adicione: assets/images/automation/n8n-workflow.png</small>
+          </div>
+          <div class="gallery-hover">
+            <i class="fas fa-search-plus"></i>
+            <span>N8N Workflow</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-gcat="automation" data-aos>
+          <img src="assets/images/automation/power-automate.png"
+               onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
+               alt="Power Automate" class="gallery-img"/>
+          <div class="gallery-placeholder">
+            <i class="fas fa-bolt"></i>
+            <span>Power Automate Fluxo</span>
+            <small>Adicione: assets/images/automation/power-automate.png</small>
+          </div>
+          <div class="gallery-hover">
+            <i class="fas fa-search-plus"></i>
+            <span>Power Automate Fluxo</span>
+          </div>
+        </div>
+
+        <!-- VÍDEO: coloque seus arquivos em assets/videos/ -->
+        <div class="gallery-item gallery-video" data-gcat="video" data-aos>
+          <video class="gallery-vid" 
+                 poster="assets/images/projects/thumb-video.png"
+                 onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex';">
+            <source src="assets/videos/demo-dashboard.mp4" type="video/mp4"/>
+          </video>
+          <div class="gallery-placeholder">
+            <i class="fas fa-play-circle"></i>
+            <span>Demo Dashboard</span>
+            <small>Adicione: assets/videos/demo-dashboard.mp4</small>
+          </div>
+          <div class="gallery-hover video-hover">
+            <i class="fas fa-play"></i>
+            <span>Reproduzir Demo</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-video" data-gcat="video" data-aos>
+          <video class="gallery-vid"
+                 poster="assets/images/automation/thumb-n8n.png">
+            <source src="assets/videos/demo-n8n.mp4" type="video/mp4"/>
+          </video>
+          <div class="gallery-placeholder">
+            <i class="fas fa-play-circle"></i>
+            <span>Demo N8N</span>
+            <small>Adicione: assets/videos/demo-n8n.mp4</small>
+          </div>
+          <div class="gallery-hover video-hover">
+            <i class="fas fa-play"></i>
+            <span>Reproduzir Demo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Vamos conversar</span>
+        <span class="section-tag"><i class="fas fa-terminal"></i> contact.init()</span>
         <h2 class="section-title">Entre em Contato</h2>
+        <div class="title-line"></div>
       </div>
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>Pronto para transformar seus dados?</h3>
-          <p>Estou disponível para projetos freelance, consultorias e oportunidades de trabalho.</p>
-          <div class="contact-items">
-            <a href="mailto:vitor@email.com" class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>vitor@email.com</span>
+          <h3>Vamos construir algo incrível juntos?</h3>
+          <p>Disponível para projetos de <strong>BI</strong>, <strong>automação</strong>, 
+          consultoria e oportunidades full-time.</p>
+          <div class="contact-cards">
+            <a href="mailto:vitor@email.com" class="contact-card">
+              <div class="cc-icon" style="--cc:#F2C811">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <span class="cc-label">E-mail</span>
+                <span class="cc-value">vitor@email.com</span>
+              </div>
             </a>
-            <a href="https://linkedin.com/in/vitorfonseca" target="_blank" class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <span>linkedin.com/in/vitorfonseca</span>
+            <a href="https://linkedin.com/in/vitorfonseca" target="_blank" class="contact-card">
+              <div class="cc-icon" style="--cc:#0A66C2">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div>
+                <span class="cc-label">LinkedIn</span>
+                <span class="cc-value">vitorfonseca</span>
+              </div>
             </a>
-            <a href="https://github.com/vitorfonseca" target="_blank" class="contact-item">
-              <i class="fab fa-github"></i>
-              <span>github.com/vitorfonseca</span>
+            <a href="https://github.com/VitorHFonseca" target="_blank" class="contact-card">
+              <div class="cc-icon" style="--cc:#e0e0e0">
+                <i class="fab fa-github"></i>
+              </div>
+              <div>
+                <span class="cc-label">GitHub</span>
+                <span class="cc-value">VitorHFonseca</span>
+              </div>
+            </a>
+            <a href="https://wa.me/5500000000000" target="_blank" class="contact-card">
+              <div class="cc-icon" style="--cc:#25D366">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div>
+                <span class="cc-label">WhatsApp</span>
+                <span class="cc-value">Chamar agora</span>
+              </div>
             </a>
           </div>
         </div>
         <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" id="name" placeholder="Seu nome" required/>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" placeholder="Seu nome" required/>
+            </div>
+            <div class="form-group">
+              <label>E-mail</label>
+              <input type="email" placeholder="seu@email.com" required/>
+            </div>
           </div>
           <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="seu@email.com" required/>
+            <label>Assunto</label>
+            <select>
+              <option value="">Selecione um assunto</option>
+              <option>Projeto Power BI</option>
+              <option>Automação N8N</option>
+              <option>Power Automate</option>
+              <option>Consultoria</option>
+              <option>Outro</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" rows="5" placeholder="Como posso te ajudar?" required></textarea>
+            <label>Mensagem</label>
+            <textarea rows="5" placeholder="Descreva seu projeto ou necessidade..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full">
             <i class="fas fa-paper-plane"></i> Enviar Mensagem
           </button>
           <div class="form-success" id="formSuccess">
-            ✅ Mensagem enviada com sucesso!
+            <i class="fas fa-check-circle"></i> Mensagem enviada! Retorno em até 24h.
           </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- MODAL Projeto 1 -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>VF<span class="logo-bracket">/&gt;</span>
+          <p>Transformando dados em decisões<br/>e processos em automação.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="#about">Sobre</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Power BI</a>
+          <a href="#automation">Automações</a>
+          <a href="#gallery">Galeria</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contato</h4>
+          <a href="mailto:vitor@email.com">E-mail</a>
+          <a href="https://linkedin.com/in/vitorfonseca" target="_blank">LinkedIn</a>
+          <a href="https://github.com/VitorHFonseca" target="_blank">GitHub</a>
+          <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Vitor Fonseca — Feito com <i class="fas fa-heart" style="color:#F2C811"></i> e muito código.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/vitorfonseca" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VitorHFonseca" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:vitor@email.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAIS Power BI -->
   <div class="modal" id="modal1">
     <div class="modal-backdrop" onclick="closeModal('modal1')"></div>
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('modal1')">
-        <i class="fas fa-times"></i>
-      </button>
-      <h2>Dashboard de Vendas</h2>
-      <div class="modal-img-placeholder"><i class="fas fa-chart-line"></i></div>
-      <p>Dashboard completo de análise de vendas com:</p>
+      <button class="modal-close" onclick="closeModal('modal1')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-chart-line"></i> Dashboard de Vendas</h2>
+      <div class="modal-img">
+        <img src="assets/images/projects/vendas.png"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+             alt="Dashboard Vendas"/>
+        <div class="modal-img-placeholder"><i class="fas fa-chart-line"></i></div>
+      </div>
       <ul>
         <li>KPIs de performance (meta vs realizado)</li>
         <li>Análise por região, produto e vendedor</li>
@@ -395,56 +839,172 @@
         <li>Previsão com análise de tendência</li>
       </ul>
       <a href="projects/project-1.pbix" class="btn btn-primary" download>
-        <i class="fas fa-download"></i> Baixar Arquivo .pbix
+        <i class="fas fa-download"></i> Baixar .pbix
       </a>
     </div>
   </div>
 
-  <!-- MODAL Projeto 2 -->
   <div class="modal" id="modal2">
     <div class="modal-backdrop" onclick="closeModal('modal2')"></div>
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('modal2')">
-        <i class="fas fa-times"></i>
-      </button>
-      <h2>Análise Financeira</h2>
-      <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#1e3c72,#2a5298);">
-        <i class="fas fa-coins"></i>
+      <button class="modal-close" onclick="closeModal('modal2')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-coins"></i> Análise Financeira</h2>
+      <div class="modal-img">
+        <img src="assets/images/projects/financeiro.png"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+             alt="Financeiro"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#1e3c72,#2a5298);">
+          <i class="fas fa-coins"></i>
+        </div>
       </div>
-      <p>Relatório financeiro detalhado com:</p>
       <ul>
         <li>DRE (Demonstrativo de Resultados)</li>
         <li>Fluxo de caixa mensal e acumulado</li>
-        <li>Indicadores: ROI, EBITDA, Margem Líquida</li>
+        <li>ROI, EBITDA, Margem Líquida</li>
         <li>Análise de centro de custos</li>
-        <li>Drill-through por período e categoria</li>
+        <li>Drill-through por período</li>
       </ul>
       <a href="projects/project-2.pbix" class="btn btn-primary" download>
-        <i class="fas fa-download"></i> Baixar Arquivo .pbix
+        <i class="fas fa-download"></i> Baixar .pbix
       </a>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <i class="fas fa-chart-bar"></i>
-          <span>VF Portfolio</span>
+  <!-- MODAIS Automação -->
+  <div class="modal" id="autoModal1">
+    <div class="modal-backdrop" onclick="closeModal('autoModal1')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('autoModal1')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-envelope-open-text"></i> Automação de E-mails</h2>
+      <div class="modal-img">
+        <img src="assets/images/automation/n8n-emails.png"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+             alt="N8N Emails"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#ea4b71,#c0392b);">
+          <i class="fas fa-project-diagram"></i>
         </div>
-        <p>Transformando dados em decisões estratégicas.</p>
-        <div class="footer-social">
-          <a href="https://linkedin.com/in/vitorfonseca" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/vitorfonseca" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:vitor@email.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="footer-copy">© 2026 Vitor Fonseca. Todos os direitos reservados.</p>
       </div>
+      <p>Workflow N8N que monitora caixa de entrada, usa IA para classificar e redigir respostas automáticas.</p>
+      <ul>
+        <li>Trigger: novo e-mail recebido (Gmail/Outlook)</li>
+        <li>Classificação por OpenAI GPT-4</li>
+        <li>Resposta automática personalizada</li>
+        <li>Notificação no Slack para casos críticos</li>
+      </ul>
     </div>
-  </footer>
+  </div>
 
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+  <div class="modal" id="autoModal2">
+    <div class="modal-backdrop" onclick="closeModal('autoModal2')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('autoModal2')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-chart-line"></i> Relatório Automático Power BI</h2>
+      <div class="modal-img">
+        <img src="assets/images/automation/n8n-powerbi.png"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+             alt="N8N Power BI"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#F2C811,#d4a800);">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+      </div>
+      <ul>
+        <li>Agenda diária às 08h via cron</li>
+        <li>Extração de dados do SQL Server</li>
+        <li>Refresh automático do dataset Power BI</li>
+        <li>Exportação de PDF e envio via WhatsApp</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="autoModal3">
+    <div class="modal-backdrop" onclick="closeModal('autoModal3')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('autoModal3')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-shopping-cart"></i> Integração E-commerce</h2>
+      <div class="modal-img">
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+      <ul>
+        <li>Sincronização Shopify ↔ ERP em tempo real</li>
+        <li>Controle de estoque automatizado</li>
+        <li>Notificação de pedidos no Google Sheets</li>
+        <li>Alertas de baixo estoque via Telegram</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="autoModal4">
+    <div class="modal-backdrop" onclick="closeModal('autoModal4')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('autoModal4')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-file-invoice"></i> Aprovação de Documentos</h2>
+      <div class="modal-img">
+        <img src="assets/images/automation/power-automate.png"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+             alt="Power Automate"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#0078D4,#004578);">
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <ul>
+        <li>Trigger: upload de documento no SharePoint</li>
+        <li>Aprovação multinível via Microsoft Teams</li>
+        <li>Registro em lista SharePoint</li>
+        <li>Notificação por e-mail ao solicitante</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="autoModal5">
+    <div class="modal-backdrop" onclick="closeModal('autoModal5')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('autoModal5')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-robot"></i> RPA — Extração de Dados</h2>
+      <div class="modal-img">
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#0078D4,#00B4AB);">
+          <i class="fas fa-robot"></i>
+        </div>
+      </div>
+      <ul>
+        <li>Acesso automatizado a sistemas legados</li>
+        <li>Extração de dados via Power Automate Desktop</li>
+        <li>Tratamento e formatação dos dados</li>
+        <li>Preenchimento automático em Excel/SharePoint</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="autoModal6">
+    <div class="modal-backdrop" onclick="closeModal('autoModal6')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('autoModal6')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-bell"></i> Alertas de KPI</h2>
+      <div class="modal-img">
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#F2C811,#0078D4);">
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
+      <ul>
+        <li>Monitoramento 24/7 de KPIs no Power BI</li>
+        <li>Alerta via Teams quando meta é atingida</li>
+        <li>Notificação de anomalias por e-mail</li>
+        <li>Relatório semanal automático</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt=""/>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop">
     <i class="fas fa-arrow-up"></i>
   </button>
 
