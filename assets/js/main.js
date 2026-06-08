@@ -1,0 +1,2 @@
+// Este arquivo contém o código JavaScript que pode ser utilizado para interatividade na página do portfólio. 
+// Ele pode incluir funções para manipulação de eventos e outras funcionalidades dinâmicas.
