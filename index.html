@@ -1,36 +1,453 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Power BI</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfólio de projetos Power BI - Visualização de dados e dashboards interativos"/>
+  <title>Power BI Portfolio | Vitor Fonseca</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <h1>Meu Portfólio Power BI</h1>
-        <nav>
-            <ul>
-                <li><a href="#project-1">Projeto 1</a></li>
-                <li><a href="#project-2">Projeto 2</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="project-1">
-            <h2>Projeto 1</h2>
-            <p>Descrição do Projeto 1.</p>
-            <a href="projects/project-1.pbix" download>Baixar Projeto 1</a>
-        </section>
-        <section id="project-2">
-            <h2>Projeto 2</h2>
-            <p>Descrição do Projeto 2.</p>
-            <a href="projects/project-2.pbix" download>Baixar Projeto 2</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Meu Portfólio Power BI</p>
-    </footer>
-    <script src="assets/js/main.js"></script>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <i class="fas fa-chart-bar"></i> VF Portfolio
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge">📊 Power BI Developer</span>
+      <h1 class="hero-title">
+        Transformando <span class="highlight">dados</span><br/>
+        em <span class="highlight">decisões</span>
+      </h1>
+      <p class="hero-subtitle">
+        Criação de dashboards interativos, relatórios analíticos<br/>
+        e soluções de Business Intelligence com Power BI.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-eye"></i> Ver Projetos
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Entrar em Contato
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="10">0</span><span>+</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="5">0</span><span>+</span>
+          <span class="stat-label">Anos Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="100">0</span><span>%</span>
+          <span class="stat-label">Dedicação</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="chart-mockup">
+        <div class="chart-bar" style="--h:60%"></div>
+        <div class="chart-bar" style="--h:85%"></div>
+        <div class="chart-bar" style="--h:45%"></div>
+        <div class="chart-bar" style="--h:95%"></div>
+        <div class="chart-bar" style="--h:70%"></div>
+        <div class="chart-bar" style="--h:55%"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Rolar</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Quem sou eu</span>
+        <h2 class="section-title">Sobre Mim</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="avatar-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="about-badge">
+            <i class="fas fa-certificate"></i> Microsoft Certified
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Analista de Dados & Power BI Developer</h3>
+          <p>
+            Profissional especializado em <strong>Business Intelligence</strong> e 
+            análise de dados, com foco em criar soluções visuais que transformam 
+            dados complexos em insights acionáveis.
+          </p>
+          <p>
+            Expertise em modelagem de dados, criação de medidas DAX avançadas, 
+            integração com múltiplas fontes de dados e design de dashboards 
+            orientados à experiência do usuário.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Modelagem de dados (Star Schema)</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>DAX avançado e Power Query (M)</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Integração com Azure & SQL Server</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Relatórios paginados (SSRS)</span>
+            </div>
+          </div>
+          <a href="#projects" class="btn btn-primary">Ver meu trabalho</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Competências</span>
+        <h2 class="section-title">Habilidades Técnicas</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#F2C811;">
+            <i class="fas fa-chart-pie" style="color:#000;"></i>
+          </div>
+          <h3>Power BI</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="95%"></div>
+          </div>
+          <span class="skill-percent">95%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#0078D4;">
+            <i class="fas fa-database" style="color:#fff;"></i>
+          </div>
+          <h3>SQL Server</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="85%"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#217346;">
+            <i class="fas fa-file-excel" style="color:#fff;"></i>
+          </div>
+          <h3>Excel Avançado</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90%"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#3776AB;">
+            <i class="fab fa-python" style="color:#fff;"></i>
+          </div>
+          <h3>Python (Pandas)</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="70%"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#00B4AB;">
+            <i class="fas fa-cloud" style="color:#fff;"></i>
+          </div>
+          <h3>Azure Synapse</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="75%"></div>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#E44D26;">
+            <i class="fas fa-code" style="color:#fff;"></i>
+          </div>
+          <h3>DAX / M Query</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="88%"></div>
+          </div>
+          <span class="skill-percent">88%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Trabalhos</span>
+        <h2 class="section-title">Projetos em Destaque</h2>
+        <p class="section-subtitle">
+          Dashboards e relatórios desenvolvidos com Power BI, 
+          focados em resultados de negócio.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="vendas">Vendas</button>
+        <button class="filter-btn" data-filter="financeiro">Financeiro</button>
+        <button class="filter-btn" data-filter="rh">RH</button>
+        <button class="filter-btn" data-filter="operacional">Operacional</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Projeto 1 -->
+        <article class="project-card" data-category="vendas">
+          <div class="card-image">
+            <div class="card-img-placeholder">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-overlay">
+              <a href="projects/project-1.pbix" class="overlay-btn" download>
+                <i class="fas fa-download"></i> Download .pbix
+              </a>
+              <button class="overlay-btn" onclick="openModal('modal1')">
+                <i class="fas fa-expand"></i> Ver Detalhes
+              </button>
+            </div>
+            <span class="card-tag">Vendas</span>
+          </div>
+          <div class="card-body">
+            <h3>Dashboard de Vendas</h3>
+            <p>Análise completa de performance de vendas com KPIs, metas e comparativos YoY.</p>
+            <div class="card-techs">
+              <span class="tech">Power BI</span>
+              <span class="tech">DAX</span>
+              <span class="tech">SQL</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-date"><i class="fas fa-calendar"></i> Jun 2026</span>
+              <div class="card-actions">
+                <a href="projects/project-1.pbix" class="btn-sm" download>
+                  <i class="fas fa-download"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project-card" data-category="financeiro">
+          <div class="card-image">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#1e3c72,#2a5298);">
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="card-overlay">
+              <a href="projects/project-2.pbix" class="overlay-btn" download>
+                <i class="fas fa-download"></i> Download .pbix
+              </a>
+              <button class="overlay-btn" onclick="openModal('modal2')">
+                <i class="fas fa-expand"></i> Ver Detalhes
+              </button>
+            </div>
+            <span class="card-tag">Financeiro</span>
+          </div>
+          <div class="card-body">
+            <h3>Análise Financeira</h3>
+            <p>Relatório financeiro com DRE, fluxo de caixa e indicadores de rentabilidade.</p>
+            <div class="card-techs">
+              <span class="tech">Power BI</span>
+              <span class="tech">Power Query</span>
+              <span class="tech">Excel</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-date"><i class="fas fa-calendar"></i> Mai 2026</span>
+              <div class="card-actions">
+                <a href="projects/project-2.pbix" class="btn-sm" download>
+                  <i class="fas fa-download"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 3 (placeholder) -->
+        <article class="project-card project-card--new" data-category="rh">
+          <div class="card-image">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#11998e,#38ef7d);">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="card-tag">RH</span>
+          </div>
+          <div class="card-body">
+            <h3>People Analytics</h3>
+            <p>Dashboard de RH com turnover, headcount e análise de desempenho por área.</p>
+            <div class="card-techs">
+              <span class="tech">Power BI</span>
+              <span class="tech">Python</span>
+              <span class="tech">Azure</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-date badge-soon"><i class="fas fa-clock"></i> Em breve</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Vamos conversar</span>
+        <h2 class="section-title">Entre em Contato</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Pronto para transformar seus dados?</h3>
+          <p>Estou disponível para projetos freelance, consultorias e oportunidades de trabalho.</p>
+          <div class="contact-items">
+            <a href="mailto:vitor@email.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>vitor@email.com</span>
+            </a>
+            <a href="https://linkedin.com/in/vitorfonseca" target="_blank" class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <span>linkedin.com/in/vitorfonseca</span>
+            </a>
+            <a href="https://github.com/vitorfonseca" target="_blank" class="contact-item">
+              <i class="fab fa-github"></i>
+              <span>github.com/vitorfonseca</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" rows="5" placeholder="Como posso te ajudar?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Mensagem enviada com sucesso!
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL Projeto 1 -->
+  <div class="modal" id="modal1">
+    <div class="modal-backdrop" onclick="closeModal('modal1')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal1')">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>Dashboard de Vendas</h2>
+      <div class="modal-img-placeholder"><i class="fas fa-chart-line"></i></div>
+      <p>Dashboard completo de análise de vendas com:</p>
+      <ul>
+        <li>KPIs de performance (meta vs realizado)</li>
+        <li>Análise por região, produto e vendedor</li>
+        <li>Comparativo Year over Year (YoY)</li>
+        <li>Funil de vendas interativo</li>
+        <li>Previsão com análise de tendência</li>
+      </ul>
+      <a href="projects/project-1.pbix" class="btn btn-primary" download>
+        <i class="fas fa-download"></i> Baixar Arquivo .pbix
+      </a>
+    </div>
+  </div>
+
+  <!-- MODAL Projeto 2 -->
+  <div class="modal" id="modal2">
+    <div class="modal-backdrop" onclick="closeModal('modal2')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal2')">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>Análise Financeira</h2>
+      <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#1e3c72,#2a5298);">
+        <i class="fas fa-coins"></i>
+      </div>
+      <p>Relatório financeiro detalhado com:</p>
+      <ul>
+        <li>DRE (Demonstrativo de Resultados)</li>
+        <li>Fluxo de caixa mensal e acumulado</li>
+        <li>Indicadores: ROI, EBITDA, Margem Líquida</li>
+        <li>Análise de centro de custos</li>
+        <li>Drill-through por período e categoria</li>
+      </ul>
+      <a href="projects/project-2.pbix" class="btn btn-primary" download>
+        <i class="fas fa-download"></i> Baixar Arquivo .pbix
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <i class="fas fa-chart-bar"></i>
+          <span>VF Portfolio</span>
+        </div>
+        <p>Transformando dados em decisões estratégicas.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/vitorfonseca" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/vitorfonseca" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:vitor@email.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">© 2026 Vitor Fonseca. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
