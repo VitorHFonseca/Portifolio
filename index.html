@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfólio — Power BI, N8N, Power Automate | Vitor Fonseca"/>
+  <meta name="description" content="Portfólio — Power BI, N8N, Power Automate, SQL | Vitor Fonseca"/>
   <title>Vitor Fonseca | Data & Automation</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -11,14 +11,14 @@
 </head>
 <body>
 
-  <!-- PARTICLES BACKGROUND -->
   <canvas id="particles"></canvas>
 
   <!-- LOADER -->
   <div class="loader" id="loader">
     <div class="loader-inner">
+      <div class="loader-logo"><span>&lt;</span>VF<span>/&gt;</span></div>
       <div class="loader-bar"></div>
-      <span class="loader-text">Carregando<span class="dots">...</span></span>
+      <span class="loader-text">Carregando...</span>
     </div>
   </div>
 
@@ -34,6 +34,7 @@
         <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
         <li><a href="#projects"><i class="fas fa-chart-bar"></i> Power BI</a></li>
         <li><a href="#automation"><i class="fas fa-robot"></i> Automações</a></li>
+        <li><a href="#database"><i class="fas fa-database"></i> Dados</a></li>
         <li><a href="#gallery"><i class="fas fa-photo-video"></i> Galeria</a></li>
         <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
       </ul>
@@ -58,20 +59,14 @@
         <span class="cursor">|</span>
       </div>
       <p class="hero-desc">
-        Especialista em <strong>Business Intelligence</strong>, 
-        <strong>Automação de Processos</strong> e <strong>Análise de Dados</strong>.
+        Especialista em <strong>Business Intelligence</strong>,
+        <strong>Automação de Processos</strong> e <strong>Engenharia de Dados</strong>.
         Transformando dados em decisões e processos em eficiência.
       </p>
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i> Ver Projetos
-        </a>
-        <a href="#automation" class="btn btn-glow">
-          <i class="fas fa-robot"></i> Automações
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-envelope"></i> Contato
-        </a>
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Ver Projetos</a>
+        <a href="#automation" class="btn btn-glow"><i class="fas fa-robot"></i> Automações</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contato</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
@@ -137,46 +132,38 @@
       <div class="about-grid">
         <div class="about-visual">
           <div class="about-avatar">
-            <!-- Substitua pela sua foto: assets/images/profile.jpg -->
-            <img src="assets/images/profile.jpeg" 
+            <img src="assets/images/profile.jpeg"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                  alt="Vitor Fonseca" class="profile-photo"/>
-            <div class="avatar-fallback">
-              <i class="fas fa-user"></i>
-            </div>
+            <div class="avatar-fallback"><i class="fas fa-user"></i></div>
             <div class="avatar-ring"></div>
             <div class="avatar-ring ring2"></div>
           </div>
           <div class="about-tools">
-            <div class="tool-badge" style="--c:#F2C811">
-              <i class="fas fa-chart-pie"></i> Power BI
-            </div>
-            <div class="tool-badge" style="--c:#ea4b71">
-              <i class="fas fa-project-diagram"></i> N8N
-            </div>
-            <div class="tool-badge" style="--c:#0078D4">
-              <i class="fas fa-bolt"></i> Power Automate
-            </div>
-            <div class="tool-badge" style="--c:#3776AB">
-              <i class="fab fa-python"></i> Python
-            </div>
+            <div class="tool-badge" style="--c:#F2C811"><i class="fas fa-chart-pie"></i> Power BI</div>
+            <div class="tool-badge" style="--c:#ea4b71"><i class="fas fa-project-diagram"></i> N8N</div>
+            <div class="tool-badge" style="--c:#0078D4"><i class="fas fa-bolt"></i> Power Automate</div>
+            <div class="tool-badge" style="--c:#CC2927"><i class="fas fa-database"></i> SQL Server</div>
+            <div class="tool-badge" style="--c:#3776AB"><i class="fab fa-python"></i> Python</div>
           </div>
         </div>
         <div class="about-text">
           <p class="about-greeting">Olá! 👋</p>
           <h3>Analista de Dados &<br/>Especialista em Automação</h3>
-          <p>Profissional com sólida experiência em <strong>Business Intelligence</strong>, 
-          desenvolvimento de dashboards analíticos e automação inteligente de processos 
-          com <strong>N8N</strong> e <strong>Power Automate</strong>.</p>
-          <p>Apaixonado por transformar dados brutos em insights poderosos e processos 
+          <p>Profissional com sólida experiência em <strong>Business Intelligence</strong>,
+          desenvolvimento de dashboards analíticos, automação inteligente de processos
+          com <strong>N8N</strong> e <strong>Power Automate</strong>, e engenharia de dados
+          com <strong>SQL Server</strong> e <strong>PostgreSQL</strong>.</p>
+          <p>Apaixonado por transformar dados brutos em insights poderosos e processos
           manuais em fluxos automatizados eficientes.</p>
           <div class="about-list">
             <div class="list-item"><i class="fas fa-check"></i> Modelagem de dados & Star Schema</div>
             <div class="list-item"><i class="fas fa-check"></i> DAX avançado & Power Query (M)</div>
             <div class="list-item"><i class="fas fa-check"></i> Workflows N8N com +40 integrações</div>
             <div class="list-item"><i class="fas fa-check"></i> Power Automate & Power Apps</div>
+            <div class="list-item"><i class="fas fa-check"></i> SQL Server, PostgreSQL & MySQL</div>
             <div class="list-item"><i class="fas fa-check"></i> Azure Data Factory & Synapse</div>
-            <div class="list-item"><i class="fas fa-check"></i> SQL Server & Python (Pandas)</div>
+            <div class="list-item"><i class="fas fa-check"></i> Python (Pandas, SQLAlchemy)</div>
           </div>
           <div class="about-actions">
             <a href="#projects" class="btn btn-primary">Ver Projetos</a>
@@ -199,76 +186,52 @@
       </div>
       <div class="skills-grid">
         <div class="skill-card" data-aos>
-          <div class="skill-icon" style="--ic:#F2C811">
-            <i class="fas fa-chart-pie"></i>
-          </div>
+          <div class="skill-icon" style="--ic:#F2C811"><i class="fas fa-chart-pie"></i></div>
           <h3>Power BI</h3>
           <p>Dashboards, relatórios paginados, DAX avançado</p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="95">
-              <span class="skill-tip">95%</span>
-            </div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"><span class="skill-tip">95%</span></div></div>
         </div>
         <div class="skill-card" data-aos>
-          <div class="skill-icon" style="--ic:#ea4b71">
-            <i class="fas fa-project-diagram"></i>
-          </div>
+          <div class="skill-icon" style="--ic:#ea4b71"><i class="fas fa-project-diagram"></i></div>
           <h3>N8N</h3>
           <p>Workflows, integrações, automação no-code</p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="88">
-              <span class="skill-tip">88%</span>
-            </div>
-          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"><span class="skill-tip">88%</span></div></div>
         </div>
         <div class="skill-card" data-aos>
-          <div class="skill-icon" style="--ic:#0078D4">
-            <i class="fas fa-bolt"></i>
-          </div>
+          <div class="skill-icon" style="--ic:#0078D4"><i class="fas fa-bolt"></i></div>
           <h3>Power Automate</h3>
-          <p>Fluxos automatizados, RPA, conectores</p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="85">
-              <span class="skill-tip">85%</span>
-            </div>
-          </div>
+          <p>Fluxos automatizados, RPA, conectores Microsoft</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"><span class="skill-tip">85%</span></div></div>
         </div>
         <div class="skill-card" data-aos>
-          <div class="skill-icon" style="--ic:#217346">
-            <i class="fas fa-database"></i>
-          </div>
+          <div class="skill-icon" style="--ic:#CC2927"><i class="fas fa-database"></i></div>
           <h3>SQL Server</h3>
-          <p>Queries avançadas, stored procedures, ETL</p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="85">
-              <span class="skill-tip">85%</span>
-            </div>
-          </div>
+          <p>Queries avançadas, stored procedures, ETL, SSIS</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"><span class="skill-tip">92%</span></div></div>
         </div>
         <div class="skill-card" data-aos>
-          <div class="skill-icon" style="--ic:#3776AB">
-            <i class="fab fa-python"></i>
-          </div>
+          <div class="skill-icon" style="--ic:#336791"><i class="fas fa-database"></i></div>
+          <h3>PostgreSQL</h3>
+          <p>Window Functions, CTEs, JSON/JSONB, performance</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"><span class="skill-tip">80%</span></div></div>
+        </div>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#3776AB"><i class="fab fa-python"></i></div>
           <h3>Python</h3>
-          <p>Pandas, automações, scripts de dados</p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="75">
-              <span class="skill-tip">75%</span>
-            </div>
-          </div>
+          <p>Pandas, SQLAlchemy, automações, scripts de dados</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"><span class="skill-tip">75%</span></div></div>
         </div>
         <div class="skill-card" data-aos>
-          <div class="skill-icon" style="--ic:#00B4AB">
-            <i class="fas fa-cloud"></i>
-          </div>
+          <div class="skill-icon" style="--ic:#00B4AB"><i class="fas fa-cloud"></i></div>
           <h3>Azure</h3>
-          <p>Synapse, Data Factory, Logic Apps</p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="78">
-              <span class="skill-tip">78%</span>
-            </div>
-          </div>
+          <p>Synapse, Data Factory, Logic Apps, SQL Azure</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"><span class="skill-tip">78%</span></div></div>
+        </div>
+        <div class="skill-card" data-aos>
+          <div class="skill-icon" style="--ic:#47A248"><i class="fas fa-leaf"></i></div>
+          <h3>MongoDB</h3>
+          <p>Documentos, Aggregation Pipeline, Atlas Cloud</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"><span class="skill-tip">65%</span></div></div>
         </div>
       </div>
     </div>
@@ -293,20 +256,13 @@
 
         <article class="project-card" data-category="vendas" data-aos>
           <div class="card-image">
-            <!-- Adicione sua imagem: assets/images/projects/vendas.png -->
             <img src="assets/images/projects/vendas.png"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                  alt="Dashboard Vendas" class="card-img"/>
-            <div class="card-img-placeholder">
-              <i class="fas fa-chart-line"></i>
-            </div>
+            <div class="card-img-placeholder"><i class="fas fa-chart-line"></i></div>
             <div class="card-overlay">
-              <a href="projects/project-1.pbix" class="overlay-btn" download>
-                <i class="fas fa-download"></i> .pbix
-              </a>
-              <button class="overlay-btn" onclick="openModal('modal1')">
-                <i class="fas fa-expand"></i> Detalhes
-              </button>
+              <a href="projects/project-1.pbix" class="overlay-btn" download><i class="fas fa-download"></i> .pbix</a>
+              <button class="overlay-btn" onclick="openModal('modal1')"><i class="fas fa-expand"></i> Detalhes</button>
             </div>
             <span class="card-tag">Vendas</span>
           </div>
@@ -314,15 +270,11 @@
             <h3>Dashboard de Vendas</h3>
             <p>KPIs, metas, comparativo YoY e análise por região.</p>
             <div class="card-techs">
-              <span class="tech">Power BI</span>
-              <span class="tech">DAX</span>
-              <span class="tech">SQL</span>
+              <span class="tech">Power BI</span><span class="tech">DAX</span><span class="tech">SQL</span>
             </div>
             <div class="card-footer">
               <span class="card-date"><i class="fas fa-calendar"></i> Jun 2026</span>
-              <a href="projects/project-1.pbix" class="btn-sm" download>
-                <i class="fas fa-download"></i>
-              </a>
+              <a href="projects/project-1.pbix" class="btn-sm" download><i class="fas fa-download"></i></a>
             </div>
           </div>
         </article>
@@ -336,12 +288,8 @@
               <i class="fas fa-coins"></i>
             </div>
             <div class="card-overlay">
-              <a href="projects/project-2.pbix" class="overlay-btn" download>
-                <i class="fas fa-download"></i> .pbix
-              </a>
-              <button class="overlay-btn" onclick="openModal('modal2')">
-                <i class="fas fa-expand"></i> Detalhes
-              </button>
+              <a href="projects/project-2.pbix" class="overlay-btn" download><i class="fas fa-download"></i> .pbix</a>
+              <button class="overlay-btn" onclick="openModal('modal2')"><i class="fas fa-expand"></i> Detalhes</button>
             </div>
             <span class="card-tag">Financeiro</span>
           </div>
@@ -349,15 +297,11 @@
             <h3>Análise Financeira</h3>
             <p>DRE, fluxo de caixa, ROI, EBITDA e margem líquida.</p>
             <div class="card-techs">
-              <span class="tech">Power BI</span>
-              <span class="tech">Power Query</span>
-              <span class="tech">Excel</span>
+              <span class="tech">Power BI</span><span class="tech">Power Query</span><span class="tech">Excel</span>
             </div>
             <div class="card-footer">
               <span class="card-date"><i class="fas fa-calendar"></i> Mai 2026</span>
-              <a href="projects/project-2.pbix" class="btn-sm" download>
-                <i class="fas fa-download"></i>
-              </a>
+              <a href="projects/project-2.pbix" class="btn-sm" download><i class="fas fa-download"></i></a>
             </div>
           </div>
         </article>
@@ -376,9 +320,7 @@
             <h3>People Analytics</h3>
             <p>Turnover, headcount e análise de desempenho por área.</p>
             <div class="card-techs">
-              <span class="tech">Power BI</span>
-              <span class="tech">Python</span>
-              <span class="tech">Azure</span>
+              <span class="tech">Power BI</span><span class="tech">Python</span><span class="tech">Azure</span>
             </div>
             <div class="card-footer">
               <span class="card-date badge-soon"><i class="fas fa-clock"></i> Em breve</span>
@@ -400,7 +342,6 @@
         <p class="section-subtitle">Fluxos automatizados com N8N e Power Automate que eliminam trabalho manual e aumentam produtividade</p>
       </div>
 
-      <!-- Tabs N8N / Power Automate -->
       <div class="auto-tabs">
         <button class="auto-tab active" data-tab="n8n">
           <i class="fas fa-project-diagram"></i> N8N
@@ -413,8 +354,7 @@
       <!-- N8N -->
       <div class="auto-content active" id="tab-n8n">
         <div class="auto-grid">
-
-          <div class="auto-card" data-aos>
+          <div class="auto-card" data-tool="n8n" data-aos>
             <div class="auto-card-header" style="--ac:#ea4b71">
               <i class="fas fa-envelope-open-text"></i>
               <span class="auto-badge">N8N</span>
@@ -439,7 +379,7 @@
             </button>
           </div>
 
-          <div class="auto-card" data-aos>
+          <div class="auto-card" data-tool="n8n" data-aos>
             <div class="auto-card-header" style="--ac:#ea4b71">
               <i class="fas fa-chart-line"></i>
               <span class="auto-badge">N8N</span>
@@ -464,7 +404,7 @@
             </button>
           </div>
 
-          <div class="auto-card" data-aos>
+          <div class="auto-card" data-tool="n8n" data-aos>
             <div class="auto-card-header" style="--ac:#ea4b71">
               <i class="fas fa-shopping-cart"></i>
               <span class="auto-badge">N8N</span>
@@ -488,15 +428,13 @@
               <i class="fas fa-expand"></i> Ver Workflow
             </button>
           </div>
-
         </div>
       </div>
 
       <!-- Power Automate -->
       <div class="auto-content" id="tab-powerautomate">
         <div class="auto-grid">
-
-          <div class="auto-card" data-aos>
+          <div class="auto-card" data-tool="pa" data-aos>
             <div class="auto-card-header" style="--ac:#0078D4">
               <i class="fas fa-file-invoice"></i>
               <span class="auto-badge pa">Power Automate</span>
@@ -521,7 +459,7 @@
             </button>
           </div>
 
-          <div class="auto-card" data-aos>
+          <div class="auto-card" data-tool="pa" data-aos>
             <div class="auto-card-header" style="--ac:#0078D4">
               <i class="fas fa-robot"></i>
               <span class="auto-badge pa">Power Automate</span>
@@ -546,7 +484,7 @@
             </button>
           </div>
 
-          <div class="auto-card" data-aos>
+          <div class="auto-card" data-tool="pa" data-aos>
             <div class="auto-card-header" style="--ac:#0078D4">
               <i class="fas fa-bell"></i>
               <span class="auto-badge pa">Power Automate</span>
@@ -570,8 +508,126 @@
               <i class="fas fa-expand"></i> Ver Fluxo
             </button>
           </div>
-
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DATABASE SECTION (NOVO) ===== -->
+  <section class="database" id="database">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-database"></i> database.connect()</span>
+        <h2 class="section-title">Banco de Dados</h2>
+        <div class="title-line"></div>
+        <p class="section-subtitle">Modelagem relacional, queries analíticas avançadas e gestão de dados em ambientes de produção</p>
+      </div>
+
+      <div class="db-overview">
+
+        <!-- Coluna Esquerda: tecnologias -->
+        <div class="db-stack">
+          <p class="db-stack-title">// tecnologias</p>
+
+          <div class="db-tech-card" data-aos style="--dbc:#CC2927">
+            <div class="db-tech-icon"><i class="fas fa-database"></i></div>
+            <div class="db-tech-info">
+              <div class="db-tech-header">
+                <h4>SQL Server</h4>
+                <span class="db-level">Avançado</span>
+              </div>
+              <p>Stored Procedures, Views, Índices, ETL, SSIS</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="92"><span class="skill-tip">92%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-tech-card" data-aos style="--dbc:#336791">
+            <div class="db-tech-icon"><i class="fas fa-database"></i></div>
+            <div class="db-tech-info">
+              <div class="db-tech-header">
+                <h4>PostgreSQL</h4>
+                <span class="db-level">Intermediário+</span>
+              </div>
+              <p>Window Functions, CTEs, JSON/JSONB, Performance</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"><span class="skill-tip">80%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-tech-card" data-aos style="--dbc:#4479A1">
+            <div class="db-tech-icon"><i class="fas fa-database"></i></div>
+            <div class="db-tech-info">
+              <div class="db-tech-header">
+                <h4>MySQL</h4>
+                <span class="db-level">Intermediário</span>
+              </div>
+              <p>Modelagem, Triggers, Otimização de queries</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="82"><span class="skill-tip">82%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-tech-card" data-aos style="--dbc:#47A248">
+            <div class="db-tech-icon"><i class="fas fa-leaf"></i></div>
+            <div class="db-tech-info">
+              <div class="db-tech-header">
+                <h4>MongoDB</h4>
+                <span class="db-level">Básico+</span>
+              </div>
+              <p>Documentos, Aggregation Pipeline, Atlas Cloud</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65"><span class="skill-tip">65%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: query + competências -->
+        <div class="db-right">
+          <div class="db-code" data-aos>
+            <div class="code-window">
+              <div class="code-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="code-title">analytics_query.sql</span>
+              </div>
+              <pre class="code-body"><code><span class="c-purple">WITH</span> <span class="c-blue">vendas_ranking</span> <span class="c-purple">AS</span> (
+  <span class="c-purple">SELECT</span>
+    v.vendedor,
+    v.produto,
+    <span class="c-yellow">SUM</span>(v.valor)  <span class="c-purple">AS</span> total,
+    <span class="c-yellow">RANK</span>() <span class="c-purple">OVER</span> (
+      <span class="c-purple">PARTITION BY</span> v.regiao
+      <span class="c-purple">ORDER BY</span> <span class="c-yellow">SUM</span>(v.valor) <span class="c-purple">DESC</span>
+    ) <span class="c-purple">AS</span> posicao
+  <span class="c-purple">FROM</span>  fato_vendas v
+  <span class="c-purple">WHERE</span> v.ano = <span class="c-orange">2026</span>
+  <span class="c-purple">GROUP BY</span> v.vendedor, v.produto, v.regiao
+)
+<span class="c-purple">SELECT</span> * <span class="c-purple">FROM</span> vendas_ranking
+<span class="c-purple">WHERE</span>  posicao &lt;= <span class="c-orange">5</span>
+<span class="c-green">-- Top 5 vendedores por região ✓</span></code></pre>
+            </div>
+          </div>
+
+          <div class="db-competencies" data-aos>
+            <p class="db-comp-title">competências</p>
+            <div class="db-comp-grid">
+              <div class="db-comp-item"><i class="fas fa-check"></i> Modelagem Dimensional (Star/Snowflake)</div>
+              <div class="db-comp-item"><i class="fas fa-check"></i> Stored Procedures & Functions</div>
+              <div class="db-comp-item"><i class="fas fa-check"></i> Window Functions & CTEs avançados</div>
+              <div class="db-comp-item"><i class="fas fa-check"></i> Tuning & Otimização de performance</div>
+              <div class="db-comp-item"><i class="fas fa-check"></i> ETL com SSIS & Azure Data Factory</div>
+              <div class="db-comp-item"><i class="fas fa-check"></i> Integração com Power BI & Python</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -585,110 +641,77 @@
         <div class="title-line"></div>
         <p class="section-subtitle">Prints de dashboards, fluxos de automação e projetos desenvolvidos</p>
       </div>
-
       <div class="gallery-filter">
         <button class="gallery-btn active" data-gfilter="all">Todos</button>
         <button class="gallery-btn" data-gfilter="dashboard">Dashboards</button>
         <button class="gallery-btn" data-gfilter="automation">Automações</button>
+        <button class="gallery-btn" data-gfilter="database">Banco de Dados</button>
         <button class="gallery-btn" data-gfilter="video">Vídeos</button>
       </div>
-
       <div class="gallery-grid" id="galleryGrid">
 
-        <!-- IMAGENS: coloque seus arquivos em assets/images/projects/ -->
-        <!-- Exemplo de item de imagem -->
         <div class="gallery-item" data-gcat="dashboard" data-aos>
           <img src="assets/images/projects/vendas.png"
                onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
                alt="Dashboard Vendas" class="gallery-img"/>
-          <div class="gallery-placeholder">
-            <i class="fas fa-chart-line"></i>
-            <span>Dashboard Vendas</span>
-            <small>Adicione: assets/images/projects/vendas.png</small>
-          </div>
-          <div class="gallery-hover">
-            <i class="fas fa-search-plus"></i>
-            <span>Dashboard Vendas</span>
-          </div>
+          <div class="gallery-placeholder"><i class="fas fa-chart-line"></i><span>Dashboard Vendas</span><small>assets/images/projects/vendas.png</small></div>
+          <div class="gallery-hover"><i class="fas fa-search-plus"></i><span>Dashboard Vendas</span></div>
         </div>
 
         <div class="gallery-item" data-gcat="dashboard" data-aos>
           <img src="assets/images/projects/financeiro.png"
                onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
                alt="Financeiro" class="gallery-img"/>
-          <div class="gallery-placeholder">
-            <i class="fas fa-coins"></i>
-            <span>Análise Financeira</span>
-            <small>Adicione: assets/images/projects/financeiro.png</small>
-          </div>
-          <div class="gallery-hover">
-            <i class="fas fa-search-plus"></i>
-            <span>Análise Financeira</span>
-          </div>
+          <div class="gallery-placeholder"><i class="fas fa-coins"></i><span>Análise Financeira</span><small>assets/images/projects/financeiro.png</small></div>
+          <div class="gallery-hover"><i class="fas fa-search-plus"></i><span>Análise Financeira</span></div>
         </div>
 
         <div class="gallery-item" data-gcat="automation" data-aos>
           <img src="assets/images/automation/n8n-workflow.png"
                onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
                alt="N8N Workflow" class="gallery-img"/>
-          <div class="gallery-placeholder">
-            <i class="fas fa-project-diagram"></i>
-            <span>N8N Workflow</span>
-            <small>Adicione: assets/images/automation/n8n-workflow.png</small>
-          </div>
-          <div class="gallery-hover">
-            <i class="fas fa-search-plus"></i>
-            <span>N8N Workflow</span>
-          </div>
+          <div class="gallery-placeholder"><i class="fas fa-project-diagram"></i><span>N8N Workflow</span><small>assets/images/automation/n8n-workflow.png</small></div>
+          <div class="gallery-hover"><i class="fas fa-search-plus"></i><span>N8N Workflow</span></div>
         </div>
 
         <div class="gallery-item" data-gcat="automation" data-aos>
           <img src="assets/images/automation/power-automate.png"
                onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
                alt="Power Automate" class="gallery-img"/>
-          <div class="gallery-placeholder">
-            <i class="fas fa-bolt"></i>
-            <span>Power Automate Fluxo</span>
-            <small>Adicione: assets/images/automation/power-automate.png</small>
-          </div>
-          <div class="gallery-hover">
-            <i class="fas fa-search-plus"></i>
-            <span>Power Automate Fluxo</span>
-          </div>
+          <div class="gallery-placeholder"><i class="fas fa-bolt"></i><span>Power Automate Fluxo</span><small>assets/images/automation/power-automate.png</small></div>
+          <div class="gallery-hover"><i class="fas fa-search-plus"></i><span>Power Automate Fluxo</span></div>
         </div>
 
-        <!-- VÍDEO: coloque seus arquivos em assets/videos/ -->
+        <div class="gallery-item" data-gcat="database" data-aos>
+          <img src="assets/images/database/schema.png"
+               onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
+               alt="Star Schema" class="gallery-img"/>
+          <div class="gallery-placeholder"><i class="fas fa-database"></i><span>Star Schema — SQL Server</span><small>assets/images/database/schema.png</small></div>
+          <div class="gallery-hover"><i class="fas fa-search-plus"></i><span>Star Schema</span></div>
+        </div>
+
+        <div class="gallery-item" data-gcat="database" data-aos>
+          <img src="assets/images/database/query.png"
+               onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex'; this.style.display='none';"
+               alt="Query Analytics" class="gallery-img"/>
+          <div class="gallery-placeholder"><i class="fas fa-code"></i><span>Query Analytics</span><small>assets/images/database/query.png</small></div>
+          <div class="gallery-hover"><i class="fas fa-search-plus"></i><span>Query Analytics</span></div>
+        </div>
+
         <div class="gallery-item gallery-video" data-gcat="video" data-aos>
-          <video class="gallery-vid" 
-                 poster="assets/images/projects/thumb-video.png"
-                 onerror="this.parentElement.querySelector('.gallery-placeholder').style.display='flex';">
+          <video class="gallery-vid" poster="assets/images/projects/thumb-video.png">
             <source src="assets/videos/demo-dashboard.mp4" type="video/mp4"/>
           </video>
-          <div class="gallery-placeholder">
-            <i class="fas fa-play-circle"></i>
-            <span>Demo Dashboard</span>
-            <small>Adicione: assets/videos/demo-dashboard.mp4</small>
-          </div>
-          <div class="gallery-hover video-hover">
-            <i class="fas fa-play"></i>
-            <span>Reproduzir Demo</span>
-          </div>
+          <div class="gallery-placeholder"><i class="fas fa-play-circle"></i><span>Demo Dashboard</span><small>assets/videos/demo-dashboard.mp4</small></div>
+          <div class="gallery-hover video-hover"><i class="fas fa-play"></i><span>Reproduzir Demo</span></div>
         </div>
 
         <div class="gallery-item gallery-video" data-gcat="video" data-aos>
-          <video class="gallery-vid"
-                 poster="assets/images/automation/thumb-n8n.png">
+          <video class="gallery-vid" poster="assets/images/automation/thumb-n8n.png">
             <source src="assets/videos/demo-n8n.mp4" type="video/mp4"/>
           </video>
-          <div class="gallery-placeholder">
-            <i class="fas fa-play-circle"></i>
-            <span>Demo N8N</span>
-            <small>Adicione: assets/videos/demo-n8n.mp4</small>
-          </div>
-          <div class="gallery-hover video-hover">
-            <i class="fas fa-play"></i>
-            <span>Reproduzir Demo</span>
-          </div>
+          <div class="gallery-placeholder"><i class="fas fa-play-circle"></i><span>Demo N8N</span><small>assets/videos/demo-n8n.mp4</small></div>
+          <div class="gallery-hover video-hover"><i class="fas fa-play"></i><span>Reproduzir Demo</span></div>
         </div>
 
       </div>
@@ -706,40 +729,32 @@
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Vamos construir algo incrível juntos?</h3>
-          <p>Disponível para projetos de <strong>BI</strong>, <strong>automação</strong>, 
-          consultoria e oportunidades full-time.</p>
+          <p>Disponível para projetos de <strong>BI</strong>, <strong>automação</strong>,
+          <strong>banco de dados</strong>, consultoria e oportunidades full-time.</p>
           <div class="contact-cards">
-            <a href="mailto:vitor@email.com" class="contact-card">
-              <div class="cc-icon" style="--cc:#F2C811">
-                <i class="fas fa-envelope"></i>
-              </div>
+            <a href="mailto:vitorhfonseca01@gmail.com" class="contact-card">
+              <div class="cc-icon" style="--cc:#F2C811"><i class="fas fa-envelope"></i></div>
               <div>
                 <span class="cc-label">E-mail</span>
                 <span class="cc-value">vitorhfonseca01@gmail.com</span>
               </div>
             </a>
             <a href="https://www.linkedin.com/in/vitor-henrique-fonseca-275828272/" target="_blank" class="contact-card">
-              <div class="cc-icon" style="--cc:#0A66C2">
-                <i class="fab fa-linkedin"></i>
-              </div>
+              <div class="cc-icon" style="--cc:#0A66C2"><i class="fab fa-linkedin"></i></div>
               <div>
                 <span class="cc-label">LinkedIn</span>
                 <span class="cc-value">vitorfonseca</span>
               </div>
             </a>
             <a href="https://github.com/VitorHFonseca" target="_blank" class="contact-card">
-              <div class="cc-icon" style="--cc:#e0e0e0">
-                <i class="fab fa-github"></i>
-              </div>
+              <div class="cc-icon" style="--cc:#e0e0e0"><i class="fab fa-github"></i></div>
               <div>
                 <span class="cc-label">GitHub</span>
                 <span class="cc-value">VitorHFonseca</span>
               </div>
             </a>
             <a href="https://wa.me/31980320000" target="_blank" class="contact-card">
-              <div class="cc-icon" style="--cc:#25D366">
-                <i class="fab fa-whatsapp"></i>
-              </div>
+              <div class="cc-icon" style="--cc:#25D366"><i class="fab fa-whatsapp"></i></div>
               <div>
                 <span class="cc-label">WhatsApp</span>
                 <span class="cc-value">Chamar agora</span>
@@ -765,6 +780,7 @@
               <option>Projeto Power BI</option>
               <option>Automação N8N</option>
               <option>Power Automate</option>
+              <option>Banco de Dados / SQL</option>
               <option>Consultoria</option>
               <option>Outro</option>
             </select>
@@ -788,8 +804,10 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand">
-          <span class="logo-bracket">&lt;</span>VF<span class="logo-bracket">/&gt;</span>
+        <div>
+          <span class="footer-brand">
+            <span class="logo-bracket">&lt;</span>VF<span class="logo-bracket">/&gt;</span>
+          </span>
           <p>Transformando dados em decisões<br/>e processos em automação.</p>
         </div>
         <div class="footer-links">
@@ -798,6 +816,7 @@
           <a href="#skills">Skills</a>
           <a href="#projects">Power BI</a>
           <a href="#automation">Automações</a>
+          <a href="#database">Banco de Dados</a>
           <a href="#gallery">Galeria</a>
         </div>
         <div class="footer-links">
@@ -811,9 +830,9 @@
       <div class="footer-bottom">
         <p>© 2026 Vitor Fonseca — Feito com <i class="fas fa-heart" style="color:#F2C811"></i> e muito código.</p>
         <div class="footer-social">
-          <a href="https://linkedin.com/in/vitorfonseca" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/vitor-henrique-fonseca-275828272/" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/VitorHFonseca" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:vitor@email.com"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:vitorhfonseca01@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </div>
@@ -826,9 +845,7 @@
       <button class="modal-close" onclick="closeModal('modal1')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-chart-line"></i> Dashboard de Vendas</h2>
       <div class="modal-img">
-        <img src="assets/images/projects/vendas.png"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-             alt="Dashboard Vendas"/>
+        <img src="assets/images/projects/vendas.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Dashboard Vendas"/>
         <div class="modal-img-placeholder"><i class="fas fa-chart-line"></i></div>
       </div>
       <ul>
@@ -838,9 +855,7 @@
         <li>Funil de vendas interativo</li>
         <li>Previsão com análise de tendência</li>
       </ul>
-      <a href="projects/project-1.pbix" class="btn btn-primary" download>
-        <i class="fas fa-download"></i> Baixar .pbix
-      </a>
+      <a href="projects/project-1.pbix" class="btn btn-primary" download><i class="fas fa-download"></i> Baixar .pbix</a>
     </div>
   </div>
 
@@ -850,12 +865,8 @@
       <button class="modal-close" onclick="closeModal('modal2')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-coins"></i> Análise Financeira</h2>
       <div class="modal-img">
-        <img src="assets/images/projects/financeiro.png"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-             alt="Financeiro"/>
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#1e3c72,#2a5298);">
-          <i class="fas fa-coins"></i>
-        </div>
+        <img src="assets/images/projects/financeiro.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Financeiro"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#1e3c72,#2a5298);"><i class="fas fa-coins"></i></div>
       </div>
       <ul>
         <li>DRE (Demonstrativo de Resultados)</li>
@@ -864,9 +875,7 @@
         <li>Análise de centro de custos</li>
         <li>Drill-through por período</li>
       </ul>
-      <a href="projects/project-2.pbix" class="btn btn-primary" download>
-        <i class="fas fa-download"></i> Baixar .pbix
-      </a>
+      <a href="projects/project-2.pbix" class="btn btn-primary" download><i class="fas fa-download"></i> Baixar .pbix</a>
     </div>
   </div>
 
@@ -877,12 +886,8 @@
       <button class="modal-close" onclick="closeModal('autoModal1')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-envelope-open-text"></i> Automação de E-mails</h2>
       <div class="modal-img">
-        <img src="assets/images/automation/n8n-emails.png"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-             alt="N8N Emails"/>
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#ea4b71,#c0392b);">
-          <i class="fas fa-project-diagram"></i>
-        </div>
+        <img src="assets/images/automation/n8n-emails.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="N8N Emails"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#ea4b71,#c0392b);"><i class="fas fa-project-diagram"></i></div>
       </div>
       <p>Workflow N8N que monitora caixa de entrada, usa IA para classificar e redigir respostas automáticas.</p>
       <ul>
@@ -900,12 +905,8 @@
       <button class="modal-close" onclick="closeModal('autoModal2')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-chart-line"></i> Relatório Automático Power BI</h2>
       <div class="modal-img">
-        <img src="assets/images/automation/n8n-powerbi.png"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-             alt="N8N Power BI"/>
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#F2C811,#d4a800);">
-          <i class="fas fa-chart-bar"></i>
-        </div>
+        <img src="assets/images/automation/n8n-powerbi.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="N8N Power BI"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#F2C811,#d4a800);"><i class="fas fa-chart-bar"></i></div>
       </div>
       <ul>
         <li>Agenda diária às 08h via cron</li>
@@ -922,9 +923,7 @@
       <button class="modal-close" onclick="closeModal('autoModal3')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-shopping-cart"></i> Integração E-commerce</h2>
       <div class="modal-img">
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#11998e,#38ef7d);"><i class="fas fa-shopping-cart"></i></div>
       </div>
       <ul>
         <li>Sincronização Shopify ↔ ERP em tempo real</li>
@@ -941,12 +940,8 @@
       <button class="modal-close" onclick="closeModal('autoModal4')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-file-invoice"></i> Aprovação de Documentos</h2>
       <div class="modal-img">
-        <img src="assets/images/automation/power-automate.png"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-             alt="Power Automate"/>
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#0078D4,#004578);">
-          <i class="fas fa-bolt"></i>
-        </div>
+        <img src="assets/images/automation/power-automate.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Power Automate"/>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#0078D4,#004578);"><i class="fas fa-bolt"></i></div>
       </div>
       <ul>
         <li>Trigger: upload de documento no SharePoint</li>
@@ -963,9 +958,7 @@
       <button class="modal-close" onclick="closeModal('autoModal5')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-robot"></i> RPA — Extração de Dados</h2>
       <div class="modal-img">
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#0078D4,#00B4AB);">
-          <i class="fas fa-robot"></i>
-        </div>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#0078D4,#00B4AB);"><i class="fas fa-robot"></i></div>
       </div>
       <ul>
         <li>Acesso automatizado a sistemas legados</li>
@@ -982,9 +975,7 @@
       <button class="modal-close" onclick="closeModal('autoModal6')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-bell"></i> Alertas de KPI</h2>
       <div class="modal-img">
-        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#F2C811,#0078D4);">
-          <i class="fas fa-bell"></i>
-        </div>
+        <div class="modal-img-placeholder" style="background:linear-gradient(135deg,#F2C811,#0078D4);"><i class="fas fa-bell"></i></div>
       </div>
       <ul>
         <li>Monitoramento 24/7 de KPIs no Power BI</li>
@@ -1004,9 +995,7 @@
     </div>
   </div>
 
-  <button class="back-to-top" id="backToTop">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
   <script src="assets/js/main.js"></script>
 </body>

@@ -96,6 +96,14 @@ const phrases = [
   'Data Analytics Engineer',
   'Business Intelligence Lead'
 ];
+const phrases = [
+  'Power BI Developer',
+  'N8N Automation Expert',
+  'Power Automate Specialist',
+  'Database Engineer',          // ← NOVO
+  'Data Analytics Engineer',
+  'Business Intelligence Lead'
+];
 let phraseIndex = 0, charIndex = 0, deleting = false;
 const typedEl = document.getElementById('typedText');
 
