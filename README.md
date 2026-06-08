@@ -26,16 +26,20 @@ Business Intelligence, visualização de dados e relatórios analíticos.
 
 ```
 Portifolio/
-├── index.html              # Página principal
-├── assets/
-│   ├── css/
-│   │   └── style.css       # Estilos (Dark theme, responsivo)
-│   └── js/
-│       └── main.js         # Interatividade e animações
-├── projects/
-│   ├── project-1.pbix      # Dashboard de Vendas
-│   └── project-2.pbix      # Análise Financeira
-└── README.md
+├── css/
+│   └── style.css
+├── images/
+│   ├── profile.jpeg          ← foto aqui diretamente
+│   ├── projects/
+│   │   ├── vendas.png
+│   │   └── financeiro.png
+│   └── automation/           ← pasta criada agora
+│       ├── n8n-workflow.png
+│       └── power-automate.png
+├── js/
+│   └── main.js
+└── videos/
+
 ```
 
 ---
